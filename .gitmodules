@@ -4,3 +4,6 @@
 [submodule "lib/lens-protocol"]
 	path = lib/lens-protocol
 	url = https://github.com/aave/lens-protocol
+[submodule "lib/solmate"]
+	path = lib/solmate
+	url = https://github.com/rari-capital/solmate

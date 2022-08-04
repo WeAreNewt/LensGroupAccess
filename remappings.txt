@@ -1,1 +1,2 @@
 @lens/=lib/lens-protocol/contracts/
+@solmate/=lib/solmate/src/
