@@ -81,9 +81,16 @@ contract LensGroupAccessTest is Test {
         );
     }
 
-    function testSetProfileId() public {
+    function testSetProfileIdIfOwner() public {
         uint256 dummyProfileId = 10;
         lensGroupAccess.setProfileId(dummyProfileId);
         assertEq(dummyProfileId, lensGroupAccess.profileId());
+    }
+
+    function testSetProfileIdIfNotOwner() public {
+        uint256 dummyProfileId = 10;
+        vm.prank(user);
+        vm.expectRevert('UNAUTHORIZED');
+        lensGroupAccess.setProfileId(dummyProfileId);
     }
 }
